@@ -1,0 +1,11 @@
+{
+
+"branch": "main",
+ "commit_message": "buildspec.yml file - hardcoded keys removed",
+  "actions": [
+    {
+      "action": "update",
+      "file_path": "buildspec.yml",
+      "content": "version: 0.2\nphases: \n  pre_build:\n    commands:\n    - echo \"Authenticating to ECR\"\n    - aws ecr get-login-password | docker login $ECR_REPOSITORY --username AWS --password-stdin\n  build:\n    commands:\n    - echo $LAMBDA_TASK_ROOT\n    - echo \"Get source from GitLab repository\"\n    - git clone http://$USER:$TOKEN@$ADDRESS/root/scenario8_$USERID.git\n    - echo \"Building Docker image\"\n    - docker build ./scenario8_$USERID -t $ECR_REPOSITORY:latest\n  post_build:\n    commands:\n    - echo \"Pushing Docker image to ECR\"\n    - docker push $ECR_REPOSITORY:latest\n    # For some reason, AWS really wants us to have build outputs\n    - echo ok > build_output\n\nartifacts:\n  files:\n  - build_output"
+    }]
+}

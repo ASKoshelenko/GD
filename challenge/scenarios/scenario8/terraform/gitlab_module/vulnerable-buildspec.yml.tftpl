@@ -1,0 +1,23 @@
+version: 0.2
+phases: 
+  pre_build:
+    commands:
+    - echo "Authenticating to ECR"
+    - aws ecr get-login-password | docker login $ECR_REPOSITORY --username AWS --password-stdin
+  build:
+    commands:
+    - echo $LAMBDA_TASK_ROOT
+    - echo "Get source from GitLab repository"
+    - git clone http://${git_lab_username}:${git_lab_token}@${git_lab_address}/root/scenario8_${git_lab_userid}.git
+    - echo "Building Docker image"
+    - docker build ./scenario8_${git_lab_userid} -t $ECR_REPOSITORY:latest
+  post_build:
+    commands:
+    - echo "Pushing Docker image to ECR"
+    - docker push $ECR_REPOSITORY:latest
+    # For some reason, AWS really wants us to have build outputs
+    - echo ok > build_output
+
+artifacts:
+  files:
+  - build_output
