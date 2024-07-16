@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- SUPPORTS OUTLOOK 2013 DPI SCALING-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- PREVENTS PAGE ZOOMING -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- ADDS SUPPORT FOR OLD VERSIONS OF INTERNET EXPLORER -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- APPEARS IN BROWSER TAB -->
+<title>EPAM | Software Product Development Services</title>
+<!-- FAVICON -->
+<link rel="icon shortcut" type="image/png" href="https://gameday-dashboard.s3.eu-central-1.amazonaws.com/images/letters/epmclooud.png">
+  
+<style>
+/* PREVENTS BROWSER TEXT RESIZING */
+*, body, div, p, a, li, table, td, table td {
+ -webkit-text-size-adjust: none !important;
+ -moz-text-size-adjust: none !important;
+ -o-text-size-adjust: none !important;
+ -ms-text-size-adjust: none !important;
+}
+/* PREVENTS BLUE BORDER ON LINKED IMAGES, WRAPPED IN HTML COMMENT TO PREVENT LOTUS NOTES FROM NOT USING THIS STYLE*/ 
+<!--img, img a {
+ border-style: none !important; 
+ border: none !important;
+} -->
+/* GENERAL STYLING */
+body, table, td, table td, img {
+ font-family:  Calibri, Arial, Helvetica, sans-serif; 
+ border: none;
+ margin: 0px;
+ padding: 0px;
+}
+/* YAHOO STRIPS THE INLINE STYLING OF THE BODY TAG, SO THIS IS A FALLBACK */
+body {
+ background: #f2f2f2; 
+}
+/*ALLOWS TEXT WRAPPING, CONTROLS LINE HEIGHT, AND PREVENTS ADDED BORDERS IN OUTLOOK */
+body, table, td, table td {
+ mso-line-height-rule: exactly;
+ mso-table-lspace: 0;
+ mso-table-rspace: 0;
+ border-collapse: collapse; 
+} 
+/* OUTLOOK.COM FIXES. OUTLOOK.COM AUTOMATICALLY ADDS A CLASS OF "ExternalClass" TO YOUR BODY TAG, WHICH IS WHY THESE WORK */
+/*RESETS OUTLOOK.COM LINE HEIGHT TO 100% INSTEAD OF ITS DEFAULT OF 131% */
+.ExternalClass * {
+ line-height: 100%;
+ width: 100%; 
+}
+
+@media only screen and (max-width: 480px) {
+/*------------MOBILE HIDE AND SHOW---------------*/
+.mobileHide {
+ display: none !important;
+ height: 0px !important;
+ width: 0px !important;
+ max-height: 0px !important;
+ max-width: 0px !important;
+ font-size: 0px !important;
+ line-height: 0px !important;
+}
+.mobileShow {
+ display: block !important;
+ height: auto !important;
+ width: auto !important;
+ max-height: none !important;
+ max-width: none !important;
+ font-size: 10px !important;
+ line-height: 10px !important;
+}
+/*-------------ALIGNMENT-------------------------*/
+.block {
+ display: block !important; 
+}
+.inlineBlock {
+ display: inline-block !important; 
+}
+.centerBlock {
+ margin: 0px auto !important; 
+ float: none !important;
+}
+.centerText {text-align: center !important;}
+.leftText {text-align: left !important;}
+.rightText {text-align: right !important;}
+
+/*---------HEIGHT----------*/
+.heightAuto {height: auto !important;}
+
+/*---------WIDTH----------*/
+.widthAuto {width: auto !important;}
+.widthFull {width: 100% !important; min-width: inherit !important; height: auto !important;}
+.width320 {width: 320px !important; min-width: inherit !important;}
+.width318 {width: 318px !important;}
+.width310 {width: 310px !important;}
+.width300 {width: 300px !important;}
+.width298 {width: 298px !important;}
+.width290 {width: 290px !important;}
+.width280 {width: 280px !important;}
+.width278 {width: 278px !important;}
+.width270 {width: 270px !important;}
+.width260 {width: 260px !important;}
+.width250 {width: 250px !important;}
+.width240 {width: 240px !important;}
+.width230 {width: 230px !important;}
+.width220 {width: 220px !important;}
+.width210 {width: 210px !important;}
+.width200 {width: 200px !important;}
+.width190 {width: 190px !important;}
+.width180 {width: 180px !important;}
+.width170 {width: 170px !important;}
+.width160 {width: 160px !important;}
+.width150 {width: 150px !important;}
+.width140 {width: 140px !important;}
+.width130 {width: 130px !important;}
+.width120 {width: 120px !important;}
+.width110 {width: 110px !important;}
+.width100 {width: 100px !important;}
+.width90 {width: 90px !important;}
+.width80 {width: 80px !important;}
+.width70 {width: 70px !important;}
+.width60 {width: 60px !important;}
+.width50 {width: 50px !important;}
+.width40 {width: 40px !important;}
+.width30 {width: 30px !important;}
+.width20 {width: 20px !important;}
+.width10 {width: 10px !important;}
+.width5 {width: 5px !important;}
+
+/*---------PADDING----------*/
+.clearPadding {padding: 0px !important}
+.clearLeftPadding {padding-left: 0px !important;}
+.clearRightPadding {padding-right: 0px !important;}
+.clearTopPadding {padding-top: 0px !important;}
+.clearBottomPadding {padding-bottom: 0px !important;}
+
+.padding50 {padding: 50px !important;}
+.padding40 {padding: 40px !important;}
+.padding30 {padding: 30px !important;}
+.padding20 {padding: 20px !important;}
+.padding19 {padding: 19px !important;}
+.padding15 {padding: 15px !important;}
+.padding10 {padding: 10px !important;}
+.padding9 {padding: 9px !important;}
+.padding5 {padding: 5px !important;}
+
+.paddingLeft100 {padding-left: 100px !important;}
+.paddingLeft90 {padding-left: 90px !important;}
+.paddingLeft80 {padding-left: 80px !important;}
+.paddingLeft70 {padding-left: 70px !important;}
+.paddingLeft60 {padding-left: 60px !important;}
+.paddingLeft50 {padding-left: 50px !important;}
+.paddingLeft40 {padding-left: 40px !important;}
+.paddingLeft30 {padding-left: 30px !important;}
+.paddingLeft20 {padding-left: 20px !important;}
+.paddingLeft10 {padding-left: 10px !important;}
+.paddingLeft5 {padding-left: 5px !important;}
+
+.paddingRight100 {padding-right: 100px !important;}
+.paddingRight90 {padding-right: 90px !important;}
+.paddingRight80 {padding-right: 80px !important;}
+.paddingRight70 {padding-right: 70px !important;}
+.paddingRight60 {padding-right: 60px !important;}
+.paddingRight50 {padding-right: 50px !important;}
+.paddingRight40 {padding-right: 40px !important;}
+.paddingRight30 {padding-right: 30px !important;}
+.paddingRight20 {padding-right: 20px !important;}
+.paddingRight10 {padding-right: 10px !important;}
+.paddingRight5 {padding-right: 5px !important;}
+
+.paddingBottom100 {padding-bottom: 100px !important;}
+.paddingBottom90 {padding-bottom: 90px !important;}
+.paddingBottom80 {padding-bottom: 80px !important;}
+.paddingBottom70 {padding-bottom: 70px !important;}
+.paddingBottom60 {padding-bottom: 60px !important;}
+.paddingBottom50 {padding-bottom: 50px !important;}
+.paddingBottom40 {padding-bottom: 40px !important;}
+.paddingBottom30 {padding-bottom: 30px !important;}
+.paddingBottom20 {padding-bottom: 20px !important;}
+.paddingBottom10 {padding-bottom: 10px !important;}
+.paddingBottom5 {padding-bottom: 5px !important;}
+
+.paddingTop100 {padding-top: 100px !important;}
+.paddingTop90 {padding-top: 90px !important;}
+.paddingTop80 {padding-top: 80px !important;}
+.paddingTop70 {padding-top: 70px !important;}
+.paddingTop60 {padding-top: 60px !important;}
+.paddingTop50 {padding-top: 50px !important;}
+.paddingTop40 {padding-top: 40px !important;}
+.paddingTop30 {padding-top: 30px !important;}
+.paddingTop20 {padding-top: 20px !important;}
+.paddingTop10 {padding-top: 10px !important;}
+.paddingTop5 {padding-top: 5px !important;}
+
+/*---------BORDERS----------*/
+.clearBorders { border: none !important;}
+.clearLeftBorder {border-left: none !important;}
+.clearRightBorder {border-right: none !important;}
+.clearTopBorder {border-top: none !important;}
+.clearBottomBorder {border-bottom: none !important;}
+
+.leftBorder {border-left: 1px solid #666666 !important;}
+.rightBorder {border-right: 1px solid #666666 !important;}
+.topBorder {border-top: 1px solid #666666 !important;}
+.bottomBorder {border-bottom: 1px solid #666666 !important;}
+
+/*---------FONT SIZES----------*/
+.font40 {font-size:40px !important; line-height: 52px !important;}
+.font35 {font-size:35px !important; line-height: 44px !important;}
+.font30 {font-size:30px !important; line-height: 38px !important;}
+.font25 {font-size:25px !important; line-height: 32px !important;}
+.font20 {font-size:20px !important; line-height: 26px !important;}
+.font18 {font-size:18px !important; line-height: 22px !important;}
+.font17 {font-size:17px !important; line-height: 21px !important;}
+.font16 {font-size:16px !important; line-height: 20px !important;}
+.font15 {font-size:15px !important; line-height: 19px !important;}
+.font14 {font-size:14px !important; line-height: 18px !important;}
+.font13 {font-size:13px !important; line-height: 17px !important;}
+.font12 {font-size:12px !important; line-height: 16px !important;}
+.font11 {font-size:11px !important; line-height: 14px !important;}
+.font10 {font-size:10px !important; line-height: 13px !important;}
+
+}
+</style>
+</head>
+
+<body style="background: #f2f2f2; margin: 0px; padding: 0px;">
+<!-- 100% WIDTH WRAPPER BACKGROUND TABLE -->
+<table style="background: #f2f2f2;" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" style="background: #f2f2f2;">
+<!-- FIXED WIDTH, CENTERED WRAPPER TABLE -->
+<table class="widthFull"  style="table-layout: fixed;" width="640" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <!-- CONTENT 1 -->
+          <tr>
+            <td>
+       <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+ <!-- DESKTOP BANNER -->
+  <tbody><tr>
+   <td class="mobileHide" style="background: #f0f0f0;">
+    <img alt="FORRESTER VENDOR LANDSCAPE: MOBILE ENTERPRISE APPS" class="mobileHide" height="100" src="https://gameday-dashboard.s3.eu-central-1.amazonaws.com/images/letters/epmclooud.png" style="display:block;" width="640"></td></tr><!-- MOBILE BANNER --><tr class="mobileShow" style=" display:none; line-height: 0px; font-size: 0px; width: 0px; height: 0px;">
+   <td class="mobileShow" style="background: #f0f0f0;  display:none; line-height: 0px; font-size: 0px; width: 0px; height: 0px;">
+    <img alt="FORRESTER VENDOR LANDSCAPE: MOBILE ENTERPRISE APPS" class="mobileShow widthFull" height="0" src="https://gameday-dashboard.s3.eu-central-1.amazonaws.com/images/letters/epmclooud.png  " style="display:none; line-height: 0px; font-size: 0px; width: 0px; height: 0px;" width="0"></td></tr></tbody></table></td></tr></table>
+            </td>
+          </tr>
+          <!-- CONTENT 2 -->
+          <tr>
+            <td>
+             <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+ 
+  <tr>
+   <td style="background: #e6e4e6; padding: 20px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+     
+      <tr>
+       <td class="padding20" style="background: #ffffff; padding: 30px; text-align: left; font-family:  Calibri, Arial, sans-serif; font-size: 12px; line-height: 20px; color: #343334;">
+        <h1>Scenario 7</h1>
+    <b>Lambda privilege escalation. Let's get our hands dirty</b>
+		<b>Task goal: </b>Find secret bucket 
+		<p><b>Resources:</b>
+			<ul>
+			  <li>S3 </li>
+			  <li>1 IAM user </li>
+              <li>2 IAM roles </li>
+        <li>Requirements for lambda function name Sc7FinalLambda(Your UserID)</li>
+			</ul>
+		<p><b>Credentials (start and finish with them):</b>
+			<ul>
+			  <li><b>Username: </b>{{ username_user1 }}</li>
+			  <li><b>Access key: </b>{{ access_key_user1 }}</li>
+			  <li><b>Secret key: </b>{{ secret_key_user1 }}</li>
+			</ul>
+	
+		
+		
+		
+		
+		
+		
+		
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+         
+        <br>
+        <span style="font-weight: bold; text-transform: uppercase; color: #76cdd7;">AWS Security Challenge Team</span><br>
+       </a></td></tr></table></td></tr></table></td></tr></table>
+            </td>
+          </tr>
+     <!-- CONTENT 3 -->
+          <tr>
+            <td>
+             <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- FOOTER --><table border="0" cellpadding="0" cellspacing="0" width="100%">
+ 
+  <tr>
+   <td align="center" style="background: #343334; padding: 15px 20px;">
+    <table align="left" border="0" cellpadding="0" cellspacing="0" width="55">
+     <!-- LOGO -->
+      <tr>
+       <td>
+        <a href="https://www.epam.com/" target="_blank"><img align="center" alt="&lt;EPAM&gt;" height="50" src="https://gameday-dashboard.s3.eu-central-1.amazonaws.com/images/letters/down.png" width="600"></a></td></tr></table><table align="right" border="0" cellpadding="0" cellspacing="0" width="95">
+     
+      <tr>
+       <td style="padding: 4px 10px 0px 0px;">
+        </td></tr></table></td></tr><!-- CANSPAM --><tr>
+   <td style="padding: 20px; text-align: center; font-family:  Calibri, Arial, sans-serif; font-size: 10px; line-height: 13px; color: #343334;">
+    <a href="#" style="color: #343334; text-decoration: none; cursor: default;">EPAM Systems, Inc.</a><br>
+    <br>
+
+            </td>
+          </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<!-- END OF FIXED WIDTH WRAPPER TABLE -->
+</td>
+</tr>
+</table>
+<!-- END OF 100% WIDTH WRAPPER BACKGROUND TABLE -->
+<!-- EXACT TARGET TRACKING CODE -->
+<custom name="opencounter" type="tracking">
+</body>
+</html>
