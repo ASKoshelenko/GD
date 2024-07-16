@@ -1,0 +1,8 @@
+# Only necessary for development.
+# black==19.3b0
+# flake8==3.7.7
+
+argcomplete==1.10.0
+PyYAML==5.4
+boto3 # The scenario7 scenario assumes boto3 is available
+requests==2.26.0
