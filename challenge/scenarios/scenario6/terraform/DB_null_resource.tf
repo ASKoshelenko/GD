@@ -1,0 +1,41 @@
+resource "null_resource" "update_dynamodb4" {
+  count = length(local.users)
+  provisioner "local-exec"{
+      command = join(" ", [
+      "aws dynamodb update-item",
+      "--profile ${var.profile}",
+      "--region ${var.region}",
+      "--table-name ${var.dbName}",
+      "--key '{\"userid\":{\"S\":\"${local.users[count.index].userid}\"}}'",
+      "--update-expression 'SET scenarios.#scenario.#access_key_user1 = :a,",
+        "scenarios.#scenario.#secret_key_user1 = :b,",
+        "scenarios.#scenario.#username_user1 = :c,",
+        "scenarios.#scenario.#username_user2 = :cc,",
+        "scenarios.#scenario.#completion_key = :d,",
+        "scenarios.#scenario.#target_lambda = :e,",
+        "scenarios.#scenario.#user1_events = :f,",
+        "scenarios.#scenario.#user2_events = :g'",
+      "--expression-attribute-names '{",
+        "\"#scenario\":\"${var.scenario-name}\",",
+        "\"#access_key_user1\":\"access_key_user1\",",
+        "\"#secret_key_user1\":\"secret_key_user1\",",
+        "\"#username_user1\":\"username_user1\",",
+        "\"#username_user2\":\"username_user2\",",
+        "\"#completion_key\":\"completion_key\",",
+        "\"#target_lambda\":\"target_lambda\",",
+        "\"#user1_events\":\"user1_events\",",
+        "\"#user2_events\":\"user2_events\"",
+      "}'",
+      "--expression-attribute-values '{",
+        "\":a\":{\"S\":\"${aws_iam_access_key.scenario6_1[count.index].id}\"},",
+        "\":b\":{\"S\":\"${aws_iam_access_key.scenario6_1[count.index].secret}\"},",
+        "\":c\":{\"S\":\"${aws_iam_user.user_scenario6_1[count.index].name}\"},",
+        "\":cc\":{\"S\":\"${aws_iam_user.user_scenario6_2[count.index].name}\"},",
+        "\":d\":{\"S\":\"${local.users[count.index].userid}${random_id.secret_key[count.index].hex}\"},",
+        "\":e\":{\"S\":\"${aws_lambda_function.sc6_complete[count.index].function_name}\"},",
+        "\":f\":{\"L\":[]},",
+        "\":g\":{\"L\":[]}",
+      "}'",
+      "--return-values UPDATED_NEW >> dbupdate.txt"])
+  }
+}
