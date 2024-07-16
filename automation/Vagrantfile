@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |config|
+  config.vm.define "goat" do |goat|
+    goat.vm.box = "ubuntu/bionic64"
+    goat.vm.provider :virtualbox do |vb|
+      vb.name = "goat"
+      vb.memory = 4096
+    end
+    goat.vm.provision "install terraform", preserve_order: true,type:"shell", path: "bootstrap/terraform.sh"
+    goat.vm.provision "install awscli", preserve_order: true,type:"shell", path: "bootstrap/aws_cli.sh"
+  end
+end

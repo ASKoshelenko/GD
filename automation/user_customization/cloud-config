@@ -1,0 +1,9 @@
+#cloud-config
+# Add users to the system.
+users:
+  - name: test1
+      primary_group: test1
+      lock_passwd: false
+      passwd: <[хеш-пароля]>
+      ssh_authorized_keys:
+        - < ssh-rsa-key>
